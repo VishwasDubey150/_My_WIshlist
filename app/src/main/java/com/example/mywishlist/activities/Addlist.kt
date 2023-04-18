@@ -73,7 +73,8 @@ class addlist : AppCompatActivity() {
             }
             else ->{
                 val MyWishlistModel=MyWishlistModel(
-                    0,Name.text.toString(),pic.toString(),description.text.toString(),dates.text.toString())
+                    0,Name.text.toString(),
+                    saveImageToInternalStorage.toString(),description.text.toString(),dates.text.toString())
 
                 val  dbHandler=DatabaseHandler(this)
                 val addMyWishlist=dbHandler.addWishlist(MyWishlistModel)

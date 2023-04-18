@@ -36,30 +36,19 @@ class place_details : AppCompatActivity() {
         }
         if (myWishlistModel != null)
         {
-            var cover=findViewById<ImageView>(R.id.cover)
+            var coverr=findViewById<ImageView>(R.id.cover)
             var name=findViewById<TextView>(R.id.name)
             var description=findViewById<TextView>(R.id.dis)
             var exp_date=findViewById<Button>(R.id.exp_date)
 
-            //cover.setImageURI(Uri.parse(myWishlistModel.image))
+
+            coverr.setImageURI(Uri.parse(myWishlistModel.image))
             name.text=myWishlistModel.title
             description.text=myWishlistModel.description
-            //location.text=myWishlistModel.location
             var e_date=myWishlistModel.date
             exp_date.setOnClickListener {
                 Toast.makeText(this,"$e_date",Toast.LENGTH_SHORT).show()
             }
         }
     }
-
-    fun backing(view: View) {
-        val intent=Intent(this,MainActivity::class.java)
-        startActivity(intent)
-    }
-
-    fun exp_date(view: View) {
-        Toast.makeText(this,"expected date",Toast.LENGTH_SHORT).show()
-    }
-
-
 }
