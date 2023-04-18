@@ -1,6 +1,7 @@
 package com.example.mywishlist.activities
 
 import android.app.Activity
+import android.app.AlertDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -24,7 +25,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun add(view: View) {
-        val intent= Intent(this, addlist::class.java)
+        val intent= Intent(this, addlist::class.java )
         startActivityForResult(intent,ADD_req_code)
     }
 
@@ -45,6 +46,7 @@ class MainActivity : AppCompatActivity() {
             }
         })
         val deleteSwipeHandler = object : SwipeToDelete(this) {
+
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
                 val adapter = rv.adapter as MyWishlistAdapter
                 adapter.removeAt(viewHolder.adapterPosition)
@@ -83,6 +85,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
     companion object
     {
         var ADD_req_code=1;
