@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.place_details"
+    android:orientation="vertical"
+    android:background="#D1E0FA">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="10dp"
+            android:onClick="backing"
+            android:backgroundTint="@color/white"
+            android:background="@color/white">
+                <ImageView
+                    android:id="@+id/cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:layout_gravity="top"
+                    android:src="@drawable/splas">
+                </ImageView>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="80dp"
+            android:layout_marginTop="-20dp">
+
+               <TextView
+                   android:id="@+id/name"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Name of place"
+                   android:layout_gravity="center"
+                   android:textSize="50dp"
+                   android:paddingLeft="20dp"
+                   android:paddingTop="10dp"
+                   android:paddingBottom="10dp"
+                   android:paddingRight="20dp"
+                   android:fontFamily="@font/blinker_bold">
+               </TextView>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/dis"
+            android:layout_width="380dp"
+            android:layout_height="210dp"
+            android:layout_gravity="center"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/blinker_bold"
+            android:text="Very beautiful place to visit Very beautiful place to visitVery beautiful place to visitVery "
+            android:textSize="30dp"
+            >
+        </TextView>
+
+        <Button
+            android:id="@+id/exp_date"
+            android:onClick="exp_date"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="150dp"
+            android:fontFamily="@font/blinker_bold"
+            android:padding="10dp"
+            android:text="expected date"
+            android:textColor="#58E0C0"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="20dp"
+            app:backgroundTint="#ffff"
+            android:layout_marginTop="30dp">
+        </Button>
+</androidx.appcompat.widget.LinearLayoutCompat>
