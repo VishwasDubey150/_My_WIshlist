@@ -53,7 +53,6 @@ class addlist : AppCompatActivity() {
         var Name=findViewById<TextView>(R.id.name)
         var dates=findViewById<TextView>(R.id.dates)
         var description=findViewById<TextView>(R.id.description)
-        var pic=findViewById<ImageView>(R.id.pic)
 
         when{
             Name.text.isNullOrEmpty() ->{

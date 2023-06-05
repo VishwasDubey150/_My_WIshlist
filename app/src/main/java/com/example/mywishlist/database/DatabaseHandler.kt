@@ -52,16 +52,12 @@ class DatabaseHandler(context: Context) :
         val contentValues = ContentValues()
         contentValues.put(KEY_TITLE, Wishlist.title) // WishlistModelClass TITLE
         contentValues.put(KEY_IMAGE, Wishlist.image) // WishlistModelClass IMAGE
-        contentValues.put(
-            KEY_DESCRIPTION,
-            Wishlist.description
-        ) // WishlistModelClass DESCRIPTION
+        contentValues.put(KEY_DESCRIPTION, Wishlist.description) // WishlistModelClass DESCRIPTION
         contentValues.put(KEY_DATE, Wishlist.date) // WishlistModelClass DATE
 
         // Inserting Row
         val result = db.insert(TABLE_MYWISHLIST, null, contentValues)
-        //2nd argument is String containing nullColumnHack  
-
+        //2nd argument is String containing nullColumnHack
         db.close() // Closing database connection
         return result
     }
@@ -85,7 +81,7 @@ class DatabaseHandler(context: Context) :
         val db = this.readableDatabase
 
         try {
-            val cursor: Cursor = db.rawQuery(selectQuery, null)
+            val cursor: Cursor = db.rawQuery(selectQuery,  null)
             if (cursor.moveToFirst()) {
                 do {
                     val place = MyWishlistModel(

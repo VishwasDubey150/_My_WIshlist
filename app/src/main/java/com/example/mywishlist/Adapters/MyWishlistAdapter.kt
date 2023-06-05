@@ -18,12 +18,10 @@ class MyWishlistAdapter(
     private var onClickListner:OnClickListner?=null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-
         return MyViewHolder(LayoutInflater.from(context).inflate(R.layout.cardview, parent, false))
     }
 
-    fun setOnClickListner(onClickListner: OnClickListner)
-    {
+    fun setOnClickListner(onClickListner: OnClickListner){
         this.onClickListner=onClickListner
     }
 
